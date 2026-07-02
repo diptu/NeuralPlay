@@ -1,0 +1,86 @@
+<svg viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0D16"/>
+      <stop offset="55%" stop-color="#10152A"/>
+      <stop offset="100%" stop-color="#161A33"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFB86B" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FFB86B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="edgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C6FFF" stop-opacity="0.05"/>
+      <stop offset="50%" stop-color="#7C6FFF" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#7C6FFF" stop-opacity="0.05"/>
+    </linearGradient>
+    <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="320" fill="url(#bg)"/>
+
+  <!-- loss-landscape contours (signature element) -->
+  <g fill="none" stroke="#7C6FFF" stroke-width="1">
+    <path d="M -20 260 C 150 200, 300 300, 480 230 C 620 175, 760 250, 900 190 C 1020 145, 1120 200, 1220 160" opacity="0.14"/>
+    <path d="M -20 280 C 160 225, 320 320, 500 255 C 640 200, 780 275, 920 215 C 1040 170, 1140 225, 1220 185" opacity="0.20"/>
+    <path d="M -20 300 C 170 250, 340 340, 520 280 C 660 225, 800 300, 940 240 C 1050 195, 1150 250, 1220 210" opacity="0.28"/>
+    <path d="M -20 200 C 140 150, 280 230, 440 170 C 580 120, 700 190, 860 130 C 980 90, 1080 140, 1220 105" opacity="0.10"/>
+  </g>
+
+  <!-- neuron graph, right side -->
+  <g stroke="url(#edgeGrad)" stroke-width="1.4">
+    <line x1="760" y1="90" x2="900" y2="60"/>
+    <line x1="760" y1="90" x2="880" y2="140"/>
+    <line x1="760" y1="90" x2="840" y2="210"/>
+    <line x1="840" y1="210" x2="980" y2="180"/>
+    <line x1="880" y1="140" x2="980" y2="180"/>
+    <line x1="880" y1="140" x2="1020" y2="100"/>
+    <line x1="900" y1="60" x2="1020" y2="100"/>
+    <line x1="1020" y1="100" x2="1140" y2="70"/>
+    <line x1="980" y1="180" x2="1140" y2="150"/>
+    <line x1="1020" y1="100" x2="1140" y2="150"/>
+    <line x1="840" y1="210" x2="960" y2="270"/>
+    <line x1="980" y1="180" x2="960" y2="270"/>
+    <line x1="960" y1="270" x2="1110" y2="250"/>
+    <line x1="1140" y1="150" x2="1110" y2="250"/>
+  </g>
+
+  <!-- glow behind the "activated" neuron -->
+  <circle cx="980" cy="180" r="46" fill="url(#glow)" filter="url(#softBlur)"/>
+
+  <!-- nodes -->
+  <g fill="#B9BFD6">
+    <circle cx="760" cy="90" r="4.5"/>
+    <circle cx="900" cy="60" r="4.5"/>
+    <circle cx="880" cy="140" r="4.5"/>
+    <circle cx="840" cy="210" r="4.5"/>
+    <circle cx="1020" cy="100" r="4.5"/>
+    <circle cx="1140" cy="70" r="4.5"/>
+    <circle cx="1140" cy="150" r="4.5"/>
+    <circle cx="960" cy="270" r="4.5"/>
+    <circle cx="1110" cy="250" r="4.5"/>
+  </g>
+  <circle cx="980" cy="180" r="7" fill="#FFB86B"/>
+
+  <!-- wordmark -->
+  <text x="80" y="150" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="58" font-weight="700" fill="#F5F3EC" letter-spacing="0.5">
+    Neural<tspan fill="#FFB86B">Play</tspan>
+  </text>
+  <text x="82" y="188" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="19" font-weight="400" fill="#9098B4" letter-spacing="0.3">
+    The Interactive Handbook on Deep Learning
+  </text>
+
+  <!-- eyebrow tag -->
+  <text x="82" y="70" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#7C6FFF" letter-spacing="3">
+    EXECUTABLE NARRATIVES
+  </text>
+
+  <!-- baseline rule -->
+  <line x1="80" y1="225" x2="480" y2="225" stroke="#2A3050" stroke-width="1"/>
+  <text x="80" y="252" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#6A7290" letter-spacing="0.4">
+    Math · Code · Live Tensors — converged in the browser
+  </text>
+</svg>
